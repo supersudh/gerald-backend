@@ -22,7 +22,7 @@ export default function (router: Router) {
         const generatedOTP = Math.random().toString().substr(2, 6);
         OTP_HASH[phone] = generatedOTP;
         console.log(OTP_HASH);
-        return res.status(200).send({ status: 'ok' });
+        return res.status(200).send({ status: 'ok', generatedOTP });
       } catch (error) {
           console.log('Error in /users/generateOTP');
           console.log(error);
