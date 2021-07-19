@@ -5,7 +5,7 @@ import routes from "./controller";
 
 const app = express();
 app.use(cors());
-const port = 8080; // default port to listen
+const port = process.env.PORT || 8080; // default port to listen
 
 app.use(express.json());
 
