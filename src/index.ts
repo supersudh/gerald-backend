@@ -1,8 +1,10 @@
 import express from "express";
+import cors from "cors";
 
 import routes from "./controller";
 
 const app = express();
+app.use(cors());
 const port = 8080; // default port to listen
 
 app.use(express.json());

@@ -47,6 +47,7 @@ function default_1(router) {
                 });
             }
             if (OTP_HASH[phone] === otp) {
+                delete OTP_HASH[phone];
                 return res.status(200).send({ status: 'ok' });
             }
             else {
