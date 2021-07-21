@@ -5,7 +5,7 @@ import { Request, Response, Router } from "express";
 const OTP_HASH: any = {};
 
 function isValidPhoneNumber(phone: string = '') {
-  const phoneGex = /\d{10}/;
+  const phoneGex = /^\d{10}$/;
   return phoneGex.test(phone);
 }
 
