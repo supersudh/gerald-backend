@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Sorry, no time to explore twilio or Plivo :-(
 const OTP_HASH = {};
 function isValidPhoneNumber(phone = '') {
-    const phoneGex = /\d{10}/;
+    const phoneGex = /^\d{10}$/;
     return phoneGex.test(phone);
 }
 function default_1(router) {
